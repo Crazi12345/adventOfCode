@@ -1,16 +1,11 @@
 package main
 
 import (
-	"aoc/2024/day1"
-	"log"
-	"time"
+	"aoc/2024/puzzles"
 )
 
 func main() {
 
-    start := time.Now()
-	day1.Puz2()
-    duration := time.Since(start)
-    log.Println(duration.Microseconds())
-	day1.Puz1()
+	puzzles.Day1Puz1()
+	puzzles.Day1Puz2()
 }

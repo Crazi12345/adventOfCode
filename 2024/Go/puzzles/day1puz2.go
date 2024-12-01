@@ -1,4 +1,4 @@
-package day1
+package puzzles
 
 import (
 	"bufio"
@@ -9,7 +9,8 @@ import (
 	"strings"
 )
 
-func Puz2() {
+func Day1Puz2() {
+	defer duration(track("Day1Puz2"))
 	file, err := os.OpenFile("puzzleinput.txt", os.O_RDWR, 0644)
 	check(err, "could not open file")
 	defer file.Close()
