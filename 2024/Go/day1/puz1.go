@@ -1,4 +1,4 @@
-package main
+package day1
 
 import (
 	"bufio"
@@ -14,7 +14,7 @@ func check(e error, message string) {
 		log.Fatal(message)
 	}
 }
-func main() {
+func Puz1() {
 	file, err := os.OpenFile("puzzleinput.txt", os.O_RDWR, 0644)
 	check(err, "could not open file")
 	defer file.Close()
