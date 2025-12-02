@@ -30,19 +30,19 @@ func Day2Puz2() {
 			id := strconv.Itoa(j)
 			for k := 2; k < len(id)/2; k++ {
 				step := len(id) / k
-				lastSeen := id[step:]
+				lastSeen := id[:step]
 				isEqual := true
 				for m := step; m < len(id); m = m + step {
 
-					log.Print(id[m:m+m] +" "+ lastSeen)
-					if id[m:m+m] != lastSeen {
+					log.Print(id[m:m+step] +" "+ lastSeen+ "   " + id)
+					if id[m:m+step] != lastSeen {
 						isEqual = false
 						break
 					}
-					lastSeen = id[m : m+m]
+					lastSeen = id[m : m+step]
 				}
 				if isEqual == true {
-				//	log.Println(lastSeen+ " "+ id)
+					log.Println(lastSeen+ " hit:"+ id)
 					invalidSum += j
 					break
 				}
