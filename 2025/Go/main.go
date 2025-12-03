@@ -10,4 +10,6 @@ func main() {
 	puzzles.Day1Puz2()
 	puzzles.Day2Puz1()
 	puzzles.Day2Puz2()
+	puzzles.Day3Puz1()
+	puzzles.Day3Puz2()
 }
